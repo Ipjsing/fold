@@ -23,7 +23,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background: linear-gradient(180deg, rgba(238, 242, 255, 0.72) 0%, rgba(247, 250, 252, 0.72) 100%),
-    url("ChatGPT Image Jun 2, 2026, 06_46_15 AM.png") center/cover no-repeat fixed;
+    url("./background.png") center/cover no-repeat fixed;
   background-blend-mode: overlay;
 }
 
