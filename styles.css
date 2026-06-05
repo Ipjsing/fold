@@ -148,6 +148,13 @@ main {
   gap: 2rem;
 }
 
+.intro-panel > div {
+  display: grid !important;
+  grid-template-columns: 1.2fr 0.8fr !important;
+  align-items: center !important;
+  gap: 2rem !important;
+}
+
 .hero-copy {
   max-width: 36rem;
 }
@@ -166,6 +173,57 @@ main {
   object-fit: contain;
   object-position: top center;
   box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list > div {
+  border-radius: 24px;
+  padding: 1.75rem;
+  background: linear-gradient(180deg, var(--color-white) 0%, rgba(242, 250, 255, 0.86) 100%);
+  border: 1px solid rgba(10, 139, 255, 0.18);
+  box-shadow: 0 24px 64px rgba(15, 23, 42, 0.08);
+}
+
+.contact-list h3 {
+  margin-top: 0;
+}
+
+.contact-list ul {
+  padding-left: 1.2rem;
+  margin: 1rem 0 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-list a {
+  color: var(--color-blue-dark);
+  text-decoration: none;
+}
+
+.hero-media img,
+.intro-panel img,
+.contact-image img,
+.registration-next-steps img {
+  width: 100%;
+  max-height: 520px;
+  height: auto;
+  border-radius: 24px;
+  object-fit: contain;
+  object-position: top center;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+.registration-next-steps {
+  margin-top: 1.5rem;
 }
 
 .eyebrow {
@@ -419,8 +477,14 @@ main {
 
 .form-panel {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 2rem;
+}
+
+.register-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .registration-summary {
