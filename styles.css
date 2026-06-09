@@ -481,6 +481,68 @@ main {
   gap: 2rem;
 }
 
+.submission-panel,
+.admin-controls {
+  margin-top: 1.5rem;
+}
+
+.admin-login-card {
+  max-width: 520px;
+}
+
+.submission-panel h3,
+.admin-controls h3,
+.admin-login-card h3 {
+  margin-top: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.submission-list,
+.submission-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.submission-card {
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 24px;
+  padding: 1.35rem;
+  background: linear-gradient(180deg, var(--color-white, #ffffff) 0%, rgba(242, 250, 255, 0.86) 100%);
+  box-shadow: 0 20px 48px rgba(15, 23, 42, 0.08);
+}
+
+.submission-card strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-blue-dark);
+}
+
+.submission-card p,
+.submission-card span {
+  margin: 0.35rem 0;
+  color: var(--color-text);
+}
+
+.submission-card span {
+  color: var(--color-blue-dark);
+  font-weight: 600;
+}
+
+.admin-controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.empty-state {
+  margin: 0;
+  color: rgba(15, 23, 42, 0.7);
+  font-style: italic;
+}
+
 .register-image {
   display: flex;
   align-items: flex-start;
@@ -601,6 +663,19 @@ textarea {
 }
 
 @media (max-width: 1024px) {
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .site-header {
+    padding: 1rem 1rem 0.75rem;
+  }
+
+  .site-nav {
+    justify-content: center;
+  }
+
   .card-grid,
   .features-grid,
   .details-panel,
@@ -608,7 +683,13 @@ textarea {
   .home-grid,
   .stat-grid,
   .testimonial-panel,
-  .dashboard-grid {
+  .dashboard-grid,
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel,
+  .contact-list > div {
     grid-template-columns: 1fr;
   }
 
@@ -640,6 +721,12 @@ textarea {
 
   .site-nav {
     justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .nav-button {
+    min-width: 0;
+    width: auto;
   }
 
   .hero-panel,
@@ -656,6 +743,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  body {
+    background-attachment: scroll;
+  }
+
   .hero-media img {
     max-height: none;
   }
@@ -666,6 +757,82 @@ textarea {
 
   .price {
     font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-button {
+    width: 100%;
+    padding: 0.95rem 1rem;
+    text-align: center;
+  }
+
+  .hero-copy,
+  .hero-panel p,
+  .intro-panel p,
+  .details-panel ul,
+  .contact-list ul,
+  .plan-summary,
+  .registration-summary {
+    max-width: 100%;
+  }
+
+  .company-cta {
+    width: 100%;
+  }
+
+  .company-cta .nav-button {
+    width: 100%;
+    max-width: none;
+  }
+
+  .whatsapp-float {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header {
+    padding: 0.85rem 0.9rem 0.75rem;
+  }
+
+  .hero-panel,
+  .intro-panel,
+  .form-panel,
+  .features-grid article,
+  .details-panel > div,
+  .company-cta,
+  .plan-card,
+  .contact-list > div,
+  .story-card,
+  .stat-card,
+  .testimonial-card,
+  .dashboard-grid article {
+    padding: 1.25rem;
+  }
+
+  main {
+    padding: 1.5rem 0.9rem 3rem;
+  }
+
+  .brand {
+    gap: 0.75rem;
+  }
+
+  .brand h1 {
+    font-size: 1.2rem;
+  }
+
+  .brand p {
+    font-size: 0.9rem;
   }
 }
 
